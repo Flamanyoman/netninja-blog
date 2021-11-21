@@ -1,0 +1,28 @@
+<html lang="en">
+  <!-- to add head content  -->
+  <%- include('./partials/head.ejs') %>
+
+  <body>
+    <!-- to add nav content  -->
+    <%- include('./partials/nav.ejs') %>
+
+    <div class="create-blog content">
+      <form action="/blogs" method="post">
+        <label for="title">Blog title</label>
+        <input type="text" name="title" id="title" required />
+        <label for="snippet">Blog snippet</label>
+        <input type="text" name="snippet" id="snippet" required />
+        <label for="body">Blog body:</label>
+        <textarea name="body" id="body" name="body"></textarea>
+        <button type="submit">submit</button>
+      </form>
+    </div>
+
+    <div class="blogs content">
+      <h2>All blogs</h2>
+    </div>
+
+    <!-- to add footer content  -->
+    <%- include('./partials/footer.ejs') %>
+  </body>
+</html>

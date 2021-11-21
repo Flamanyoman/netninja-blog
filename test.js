@@ -4,8 +4,10 @@ const app = express();
 const mongoose = require('mongoose');
 const Blog = require('./models/blog');
 
+require('dotenv').config();
+
 const dbURI =
-  'mongodb+srv://flaboy:flaboy123@acadera.hqkcv.mongodb.net/myFirstDatabase?retryWrites=true&w=majority';
+process.env.dbURI;
 mongoose
   .connect(dbURI, { useNewUrlParser: true, useUnifiedTopology: true })
   .then((result) => {
